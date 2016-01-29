@@ -50,3 +50,4 @@ Library
 *.csproj
 GGJ2016.sln
 *.sln
+*.suo

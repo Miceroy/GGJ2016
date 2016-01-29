@@ -1,7 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ActionObjectController : MonoBehaviour {
+public class TriggerController : MonoBehaviour {
+    private int m_id;
+    
+    public int TriggerId
+    {
+        get{return m_id;}
+        set{m_id = value;}
+    }
+
+    private bool m_selected;
+
+    public bool TriggerSelected
+    {
+        get { return m_selected; }
+        set { m_selected = value; }
+    }
+
+
     GameObject enteredGO;
     GameObject leavedGO;
     GameSceneController sceneController;
@@ -13,7 +30,7 @@ public class ActionObjectController : MonoBehaviour {
 
         updateVisuals(false);
 	}
-
+    
     void updateVisuals(bool onTrigger)
     {
         if (sceneController.areTriggersVisible())
