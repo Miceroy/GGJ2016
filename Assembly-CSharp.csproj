@@ -45,8 +45,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameSceneController.cs" />
-     <Compile Include="Assets\PlayerCharacterController.cs" />
+     <Compile Include="Assets\Scripts\ActionObjectController.cs" />
+     <Compile Include="Assets\Scripts\GameSceneController.cs" />
+     <Compile Include="Assets\Scripts\PlayerCharacterController.cs" />
+     <Compile Include="Assets\Scripts\PoliceCharacterController.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonAIControl.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
