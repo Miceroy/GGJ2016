@@ -1,36 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TriggerController : MonoBehaviour {
-    private int m_id;
-    
-    public int TriggerId
+public class ItemSlotController : MonoBehaviour, ActionInterface
+{
+    public Items.ItemType m_id;
+
+    public Items.ItemType ItemId
     {
-        get{return m_id;}
-        set{m_id = value;}
+        get { return m_id; }
     }
 
-    private bool m_selected;
+    private bool m_picked;
 
-    public bool TriggerSelected
+    public void doAction()
     {
-        get { return m_selected; }
-        set { m_selected = value; }
+        Debug.Log("ItemSlotController does action!");
     }
+
 
 
     GameObject enteredGO;
     GameObject leavedGO;
     GameSceneController sceneController;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
+        m_picked = false;
         enteredGO = gameObject.transform.FindChild("Entered").gameObject;
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
 
         updateVisuals(false);
-	}
-    
+    }
+
     void updateVisuals(bool onTrigger)
     {
         if (sceneController.areTriggersVisible())
@@ -71,7 +73,7 @@ public class TriggerController : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-    //    Debug.Log("OnTriggerStay " + other.gameObject.name);
+        //    Debug.Log("OnTriggerStay " + other.gameObject.name);
     }
 
     void OnTriggerExit(Collider other)
