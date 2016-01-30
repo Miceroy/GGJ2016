@@ -26,6 +26,7 @@ GameObject:
   - 33: {fileID: 3377580}
   - 23: {fileID: 2302604}
   - 65: {fileID: 6507678}
+  - 114: {fileID: 11495066}
   m_Layer: 0
   m_Name: jaakaappi
   m_TagString: Untagged
@@ -101,6 +102,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0097025279, y: .00799999759, z: .0080048535}
   m_Center: {x: .000851271732, y: -7.4505806e-09, z: -2.42749184e-06}
+--- !u!114 &11495066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

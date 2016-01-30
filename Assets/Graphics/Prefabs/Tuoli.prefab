@@ -27,6 +27,7 @@ GameObject:
   - 23: {fileID: 2379122}
   - 64: {fileID: 6458406}
   - 54: {fileID: 5496810}
+  - 114: {fileID: 11487216}
   m_Layer: 0
   m_Name: tuoli
   m_TagString: Untagged
@@ -117,6 +118,17 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 9fa6a6092bbe6ae44ac8622b35b977f6, type: 3}
+--- !u!114 &11487216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

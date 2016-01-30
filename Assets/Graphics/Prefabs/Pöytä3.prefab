@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2326042}
   - 65: {fileID: 6539048}
   - 54: {fileID: 5455566}
+  - 114: {fileID: 11435962}
   m_Layer: 0
   m_Name: poyta3
   m_TagString: Untagged
@@ -117,6 +118,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .00800000038, y: .00799999852, z: .0578016676}
   m_Center: {x: -7.24075362e-05, y: -1.7285809e-05, z: -.0209000483}
+--- !u!114 &11435962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

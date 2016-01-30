@@ -27,6 +27,7 @@ GameObject:
   - 23: {fileID: 2329924}
   - 65: {fileID: 6556854}
   - 54: {fileID: 5465190}
+  - 114: {fileID: 11405264}
   m_Layer: 0
   m_Name: tv
   m_TagString: Untagged
@@ -117,6 +118,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0100843105, y: .00766245602, z: .0100843096}
   m_Center: {x: -.000235051615, y: .00082514697, z: .00504210079}
+--- !u!114 &11405264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

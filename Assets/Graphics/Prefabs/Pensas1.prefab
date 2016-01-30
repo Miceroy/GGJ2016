@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 492464}
   - 33: {fileID: 3349744}
   - 23: {fileID: 2381726}
+  - 114: {fileID: 11495284}
   m_Layer: 0
   m_Name: pensas1
   m_TagString: Untagged
@@ -88,6 +89,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169752}
   m_Mesh: {fileID: 4300000, guid: 0536fc64d69d39a4db96d7aa32dd3325, type: 3}
+--- !u!114 &11495284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

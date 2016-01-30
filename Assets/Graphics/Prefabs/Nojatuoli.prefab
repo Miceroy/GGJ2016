@@ -27,6 +27,7 @@ GameObject:
   - 23: {fileID: 2362356}
   - 65: {fileID: 6512120}
   - 54: {fileID: 5475036}
+  - 114: {fileID: 11423330}
   m_Layer: 0
   m_Name: nojatuoli
   m_TagString: Untagged
@@ -117,6 +118,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .00677911891, y: .00656393683, z: .041354239}
   m_Center: {x: -1.50440965e-05, y: .00075675582, z: .0208746083}
+--- !u!114 &11423330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

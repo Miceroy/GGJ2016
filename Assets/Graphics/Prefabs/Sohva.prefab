@@ -27,6 +27,7 @@ GameObject:
   - 23: {fileID: 2385852}
   - 64: {fileID: 6450628}
   - 54: {fileID: 5455566}
+  - 114: {fileID: 11482932}
   m_Layer: 0
   m_Name: sohva
   m_TagString: Untagged
@@ -117,6 +118,17 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 896565463a48c5943bfe4e2d8bb42b4b, type: 3}
+--- !u!114 &11482932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9003ca6b17644044a9b83980d63263c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
