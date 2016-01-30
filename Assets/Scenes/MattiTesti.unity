@@ -144,7 +144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &400503602
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &543469162
 Prefab:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -.410000026
+      value: 4.82999992
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -248,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.8900001
+      value: 4.11999989
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalRotation.x
@@ -268,7 +268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -276,6 +276,52 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 5103f31f1a3e1394a9148fad3dcf0c65, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &575071454
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.97000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.8165211e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.97000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1.62920685e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 400042, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d80d45365ff4a44418dde3f1a07892e5, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ffe2c114f1bc80f48b91bfe384b4cf4c, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1363956645
 GameObject:
@@ -346,7 +392,7 @@ Transform:
   m_GameObject: {fileID: 1363956645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
