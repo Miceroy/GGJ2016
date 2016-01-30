@@ -26,6 +26,7 @@ GameObject:
   - 33: {fileID: 3365720}
   - 23: {fileID: 2362356}
   - 65: {fileID: 6512120}
+  - 54: {fileID: 5475036}
   m_Layer: 0
   m_Name: nojatuoli
   m_TagString: Untagged
@@ -89,6 +90,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197018}
   m_Mesh: {fileID: 4300000, guid: 718991d424bd1d045a7f8a4af5017763, type: 3}
+--- !u!54 &5475036
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197018}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6512120
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -107,7 +123,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158078}

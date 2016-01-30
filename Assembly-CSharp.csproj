@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\ItemSlotController.cs" />
      <Compile Include="Assets\Scripts\Items.cs" />
      <Compile Include="Assets\Scripts\PlayerCharacterController.cs" />
+     <Compile Include="Assets\Scripts\PoliceCarController.cs" />
      <Compile Include="Assets\Scripts\PoliceCharacterController.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonAIControl.cs" />
      <Compile Include="Assets\Scripts\Waypoint.cs" />
