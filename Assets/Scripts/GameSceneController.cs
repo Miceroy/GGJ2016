@@ -90,15 +90,15 @@ public class GameSceneController : MonoBehaviour {
     /// </summary>
     public void onLevelCompleted()
     {
-        Debug.Log("WIN! TODO: Load next level");
-
+        //Debug.Log("WIN! TODO: Load next level");
+        Application.LoadLevel(1);
         disablePlayer();
     }
 
     public void onLevelFailed()
     {
-        Debug.Log("LOSE! TODO: Load menu scene");
-        
+        //Debug.Log("LOSE! TODO: Load menu scene");
+        Application.LoadLevel(0);
         disablePlayer();
     }
 
