@@ -1,25 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemSlotController : MonoBehaviour, ActionInterface
-{
-    public Items.ItemType m_requiredTriggerItemId;
-    
-    public void doAction()
-    {
-        if (sceneController.isItemPicked(m_requiredTriggerItemId))
-        {
-            Debug.Log("Do action for item slot " + m_requiredTriggerItemId.ToString());
-            sceneController.itemAction(m_requiredTriggerItemId);
-            gameObject.GetComponent<Collider>().enabled = false;
-        }
-        else
-        {
-            Debug.Log("Can't do action for item slot " + m_requiredTriggerItemId.ToString() + "! No item was picked!");
-        }
-    }
-
-
+public class ExitZoneController : MonoBehaviour {
 
     GameObject enteredGO;
     GameObject leavedGO;
@@ -27,6 +9,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
     // Use this for initialization
     void Start()
     {
+       // m_picked = false;
         enteredGO = gameObject.transform.FindChild("Entered").gameObject;
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
@@ -55,33 +38,30 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
             leavedGO.SetActive(false);
         }
     }
-    /*
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	
-	}*/
 
     void OnTriggerEnter(Collider other)
     {
         updateVisuals(true);
-
-    //    Debug.Log("OnTriggerEnter " + other.gameObject.name);
-
-        //Destroy(other.gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            if (sceneController.isAllObjectivesCompleted())
+            {
+                Debug.Log("Level completed!");
+                sceneController.onLevelCompleted();
+            }
+            else
+            {
+                Debug.Log("Some items are not yet picked can not complete the level.");
+            }
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        //    Debug.Log("OnTriggerStay " + other.gameObject.name);
     }
 
     void OnTriggerExit(Collider other)
     {
         updateVisuals(false);
-
-
-        //Destroy(other.gameObject);
     }
 }

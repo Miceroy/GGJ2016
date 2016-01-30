@@ -12,6 +12,7 @@ public class Items {
 
     public enum ItemType
     {
-        FLOWER
+        FLOWER,
+        LAST_ITEM_TYPE
     }
 }

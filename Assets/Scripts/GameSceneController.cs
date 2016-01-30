@@ -2,7 +2,83 @@
 using System.Collections;
 
 public class GameSceneController : MonoBehaviour {
+  /*  public struct LevelItem
+    {
+        public Items.ItemType itemId;
+        public bool itemPicked;
+    };
+    */
     public bool m_visibleTriggers = true;
+    public Items.ItemType[] m_requiredItems;
+
+    struct ItemPickAndAction
+    {
+        public bool picked;
+        public bool action;
+    }
+
+    ItemPickAndAction[] m_pickedItems = null;
+
+    public void itemPicked(Items.ItemType itemId)
+    {
+        if (m_pickedItems[(int)itemId].picked == true)
+        {
+            Debug.LogWarning("Item " + itemId.ToString() + " picked twice!" );
+        }
+        else
+        { 
+            Debug.Log("Item " + itemId.ToString() + " picked" );
+        }
+        m_pickedItems[(int)itemId].picked = true;
+    }
+
+    public void itemAction(Items.ItemType itemId)
+    {
+        if (m_pickedItems[(int)itemId].action == true)
+        {
+            Debug.LogWarning("Item " + itemId.ToString() + " action done twice!");
+        }
+        else
+        {
+            Debug.Log("Item " + itemId.ToString() + " done action");
+        }
+        m_pickedItems[(int)itemId].action = true;
+    }
+
+    /// <summary>
+    /// Returns rue if given item is picked from the level.
+    /// </summary>
+    /// <param name="itemId"></param>
+    /// <returns></returns>
+    public bool isItemPicked(Items.ItemType itemId)
+    {
+        return m_pickedItems[(int)itemId].picked;
+    }
+
+    /// <summary>
+    /// Returns true if all items are picked from the level. 
+    /// </summary>
+    /// <returns></returns>
+    public bool isAllObjectivesCompleted()
+    {
+        for (int i = 0; i < m_requiredItems.Length; ++i)
+        {
+            if (!m_pickedItems[(int)i].action)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// This method is called, when level is completed. Loads new level.
+    /// </summary>
+    public void onLevelCompleted()
+    {
+        Debug.Log("TODO: Load next level");
+    }
 
     public bool areTriggersVisible()
     {
@@ -11,7 +87,12 @@ public class GameSceneController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        m_pickedItems = new ItemPickAndAction[(int)Items.ItemType.LAST_ITEM_TYPE];
+        for (int i = 0; i < m_pickedItems.Length; ++i)
+        {
+            m_pickedItems[i].picked = false;
+            m_pickedItems[i].action = false;
+        }
 	}
 	
 	// Update is called once per frame

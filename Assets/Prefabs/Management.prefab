@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 488380}
-  - 114: {fileID: 11427730}
+  - 114: {fileID: 11436162}
   m_Layer: 0
   m_Name: Management
   m_TagString: GameController
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11427730
+--- !u!114 &11436162
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_visibleTriggers: 1
+  m_requiredItems: 00000000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

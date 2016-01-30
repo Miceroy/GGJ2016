@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\BloodEngine.cs" />
      <Compile Include="Assets\Scripts\BloodScript.cs" />
      <Compile Include="Assets\Scripts\CustomAIMoveScript.cs" />
+     <Compile Include="Assets\Scripts\ExitZoneController.cs" />
      <Compile Include="Assets\Scripts\GameSceneController.cs" />
      <Compile Include="Assets\Scripts\ItemController.cs" />
      <Compile Include="Assets\Scripts\ItemSlotController.cs" />
