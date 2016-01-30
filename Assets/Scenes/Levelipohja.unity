@@ -75,9 +75,9 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentRadius: .5
-    agentHeight: 1.60000002
-    agentSlope: 25.7999992
-    agentClimb: .100000001
+    agentHeight: .479999989
+    agentSlope: 60
+    agentClimb: .300000012
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
@@ -3611,7 +3611,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1001 &1275486764
 Prefab:
   m_ObjectHideFlags: 0
