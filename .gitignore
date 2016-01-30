@@ -51,3 +51,8 @@ Library
 GGJ2016.sln
 *.sln
 *.suo
+*.csproj
+Assembly-CSharp-firstpass.csproj
+*.csproj
+Assembly-CSharp.csproj
+GGJ2016.sln
