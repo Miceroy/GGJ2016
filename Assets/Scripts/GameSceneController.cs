@@ -11,6 +11,9 @@ public class GameSceneController : MonoBehaviour {
     public bool m_visibleTriggers = true;
     public Items.ItemType[] m_requiredItems;
 
+    private GameObject m_youWinText = null;
+    private GameObject m_youLoseText = null;
+
     struct ItemPickAndAction
     {
         public bool picked;
@@ -85,21 +88,32 @@ public class GameSceneController : MonoBehaviour {
         }
     }
 
+    void LoadNextLevel()
+    {
+        Application.LoadLevel(1);
+    }
+
+    void LoadMainMenu()
+    {
+        Application.LoadLevel(0);
+    }
+
     /// <summary>
     /// This method is called, when level is completed. Loads new level.
     /// </summary>
     public void onLevelCompleted()
     {
         //Debug.Log("WIN! TODO: Load next level");
-        Application.LoadLevel(1);
+        m_youWinText.SetActive(true);
         disablePlayer();
+        Invoke("LoadNextLevel", 5.0f);
     }
 
     public void onLevelFailed()
     {
-        //Debug.Log("LOSE! TODO: Load menu scene");
-        Application.LoadLevel(0);
+        m_youLoseText.SetActive(true);
         disablePlayer();
+        Invoke("LoadMainMenu", 5.0f);
     }
 
     public bool areTriggersVisible()
@@ -108,7 +122,13 @@ public class GameSceneController : MonoBehaviour {
     }
 
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
+        m_youWinText = transform.FindChild("GUI/Canvas/YouWinText").gameObject;
+        m_youLoseText = transform.FindChild("GUI/Canvas/YouLoseText").gameObject;
+        m_youWinText.SetActive(false);
+        m_youLoseText.SetActive(false);
+
         m_pickedItems = new ItemPickAndAction[(int)Items.ItemType.LAST_ITEM_TYPE];
         for (int i = 0; i < m_pickedItems.Length; ++i)
         {
