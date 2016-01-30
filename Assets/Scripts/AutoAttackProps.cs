@@ -18,6 +18,7 @@ public class AutoAttackProps : MonoBehaviour {
         {
             for (int i = 0; i < m_actionInterfaces.Length; ++i)
             {
+                Debug.Log("Police hits props!!");
                 m_actionInterfaces[i].doAction();
             }
 
@@ -39,4 +40,17 @@ public class AutoAttackProps : MonoBehaviour {
     {
         m_actionInterfaces = null;
     }
+    /*
+    void OnCollisionEnter(Collision collision)
+    {
+        findDynamicPropsControllers(other);
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+    }
+    void OnCollisionLeave(Collision collision)
+    {
+        m_actionInterfaces = null;
+    }*/
 }
