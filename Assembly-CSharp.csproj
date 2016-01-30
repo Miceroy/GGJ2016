@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\AutoAttackProps.cs" />
      <Compile Include="Assets\Scripts\BloodEngine.cs" />
      <Compile Include="Assets\Scripts\BloodScript.cs" />
      <Compile Include="Assets\Scripts\CustomAIMoveScript.cs" />
