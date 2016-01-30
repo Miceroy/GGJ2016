@@ -4,6 +4,7 @@ using System.Collections;
 public class DeadBodyController : MonoBehaviour, ActionInterface
 {
     public float impulse = 100.0f;
+    Rigidbody body;
 
     float m_cooldown;
 
@@ -21,7 +22,6 @@ public class DeadBodyController : MonoBehaviour, ActionInterface
     {
         if( m_cooldown < 0.0f )
         {
-            Rigidbody body = GetComponent<Rigidbody>();
             if (body != null)
             {
                 Vector3 delta = gameObject.transform.position - other.transform.position;
