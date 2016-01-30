@@ -11,16 +11,25 @@ public class CustomAIMoveScript : MonoBehaviour
     public float moveSpeed = 2.0f;
     float waypointActivationRange = 0.1f;
 
+    float m_RunCycleLegOffset = 0.2f;
+
+    public float animSpeed = 1.0f;
+
     public Vector3 m_move;
     private Transform player;
     Transform t;
+    Vector3 prevPos = Vector3.zero;
     NavMeshAgent brains;
-    
+
+    Animator m_Animator;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         t = GetComponent<Transform>();
         brains = GetComponent<NavMeshAgent>();
+        m_Animator = GetComponent<Animator>();
+        prevPos = t.position;
     }
 
 
@@ -70,45 +79,45 @@ public class CustomAIMoveScript : MonoBehaviour
             
         }
         brains.destination = targetPos;
-        /*targetPos.y = t.position.y;
-        m_move = (targetPos - t.position).normalized;
-        m_move.Normalize();
+        UpdateAnimator(t.position - prevPos);
+        prevPos = t.position;
 
-   
-        
-        if (Physics.Raycast(t.position, m_move, out rh, 80))
+    }
+    void UpdateAnimator(Vector3 move)
+    {
+        // update the animator parameters
+        float m_TurnAmount = Mathf.Atan2(move.x, move.z);
+        m_Animator.SetFloat("Forward", move.z, 0.1f, Time.deltaTime);
+        m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
+        //m_Animator.SetBool("Crouch", m_Crouching);
+        //m_Animator.SetBool("OnGround", m_IsGrounded);
+        //if (!m_IsGrounded)
+        //{
+        //    m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+        //}
+
+        // calculate which leg is behind, so as to leave that leg trailing in the jump animation
+        // (This code is reliant on the specific run cycle offset in our animations,
+        // and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
+        float runCycle =
+            Mathf.Repeat(
+                m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
+        //float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
+        //if (m_IsGrounded)
+        //{
+        //    m_Animator.SetFloat("JumpLeg", jumpLeg);
+        //}
+
+        // the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
+        // which affects the movement speed because of the root motion.
+        if (/*m_IsGrounded &&*/ move.magnitude > 0)
         {
-            if (rh.collider.gameObject.tag == "Player")
-            { useDefaultWaypoints = false; }
-            else
-            {
-                if (Physics.Raycast(t.position, t.forward, out rh, 80, omitPoliceLayerMask))
-                {
-                    if (rh.transform != t)
-                        m_move += rh.normal * 50;
-                }
-
-                Vector3 l_ray = t.position + new Vector3(-2.0f, 0, 0);
-                Vector3 r_ray = t.position + new Vector3(2.0f, 0, 0);
-                if (Physics.Raycast(l_ray, t.forward, out rh, 80, omitPoliceLayerMask))
-                {
-                    if (rh.transform != t)
-                        m_move += rh.normal * 50;
-                }
-
-                if (Physics.Raycast(r_ray, t.forward, out rh, 80, omitPoliceLayerMask))
-                {
-                    if (rh.transform != t)
-                        m_move += rh.normal * 50;
-                }
-            }
+            m_Animator.speed = animSpeed;
         }
-
-
-        m_move.y = 0;
-        Quaternion q = Quaternion.LookRotation(m_move);
-        t.rotation = Quaternion.Slerp(t.rotation, q, Time.deltaTime * 20);
-        t.position += t.forward * 3 * Time.deltaTime;
-        */
+        else
+        {
+            // don't use that while airborne
+            m_Animator.speed = 1;
+        }
     }
 }
