@@ -6,7 +6,7 @@ public class ItemController : MonoBehaviour, ActionInterface
 {
     public Items.ItemType m_triggerItemId;
 
-    public void doAction()
+    public void doAction(GameObject other)
     {
         gameObject.GetComponent<Collider>().enabled = false;
         enteredGO.SetActive(false);

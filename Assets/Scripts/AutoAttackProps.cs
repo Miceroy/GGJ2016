@@ -19,7 +19,7 @@ public class AutoAttackProps : MonoBehaviour {
             for (int i = 0; i < m_actionInterfaces.Length; ++i)
             {
                 Debug.Log("Police hits props!!");
-                m_actionInterfaces[i].doAction();
+                m_actionInterfaces[i].doAction(gameObject);
             }
 
             m_actionInterfaces = null;
