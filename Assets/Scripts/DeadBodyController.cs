@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DeadBodyController : MonoBehaviour, ActionInterface
 {
-    public float impulse;
+    public float impulse = 100.0f;
 
     float m_cooldown;
 
