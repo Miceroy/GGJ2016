@@ -24,6 +24,7 @@ public class PlayerCharacterController : MonoBehaviour {
         {
             for (int i = 0; i < m_actionInterfaces.Length; ++i)
             {
+                Debug.Log("dfsdfsdfsd");
                 m_actionInterfaces[i].doAction(gameObject);
             }
 

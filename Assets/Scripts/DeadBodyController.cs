@@ -4,7 +4,7 @@ using System.Collections;
 public class DeadBodyController : MonoBehaviour, ActionInterface
 {
     public float impulse = 100.0f;
-    Rigidbody body;
+    public Rigidbody body;
 
     float m_cooldown;
 
@@ -27,8 +27,9 @@ public class DeadBodyController : MonoBehaviour, ActionInterface
                 Vector3 delta = gameObject.transform.position - other.transform.position;
                 delta.Normalize();
                 body.AddExplosionForce(impulse,
-                    other.transform.position, 1.0f, 1.0f, ForceMode.Impulse);
+                    other.transform.position, 10.0f, 1.0f, ForceMode.Impulse);
                 m_cooldown = 0.5f;
+                Debug.Log("toimii törmäys");
             }
         }
     }
