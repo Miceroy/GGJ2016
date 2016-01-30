@@ -50,6 +50,7 @@ ModelImporter:
     400040: Cube.001
     400042: //RootNode
     4300000: Cube.001
+    7400000: Armature.001|Hit
     9500000: //RootNode
     13700000: Cube.001
   materials:
