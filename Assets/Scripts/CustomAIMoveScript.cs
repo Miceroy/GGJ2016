@@ -68,7 +68,7 @@ public class CustomAIMoveScript : MonoBehaviour
             
         }
 
-
+        targetPos.y = t.position.y;
         m_move = (targetPos - t.position).normalized;
         m_move.Normalize();
 
