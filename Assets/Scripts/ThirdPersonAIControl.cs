@@ -12,9 +12,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool m_jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         private bool m_crouch;
         private Transform player;
-        
+        private bool m_moveEnabled;
+
+        public void DisableMovement()
+        {
+            m_moveEnabled = false;
+        }
+
         private void Start()
         {
+            m_moveEnabled = true;
             // get the third person character ( this should never be null due to require component )
             m_character = GetComponent<ThirdPersonCharacter>();
             player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -23,6 +30,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+            if (!m_moveEnabled)
+            {
+                return;
+            }
+            
             m_move = player.position - gameObject.transform.position;
             m_move.Normalize();
             m_move = m_move * 0.8f;
@@ -35,7 +47,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
-
+            if (!m_moveEnabled)
+            {
+                return;
+            }
             // pass all parameters to the character control script
             m_character.Move(m_move, m_crouch, m_jump);
             m_jump = false;

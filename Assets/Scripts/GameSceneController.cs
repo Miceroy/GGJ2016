@@ -72,12 +72,34 @@ public class GameSceneController : MonoBehaviour {
         return true;
     }
 
+    private void disablePlayer()
+    {
+        GameObject [] players = GameObject.FindGameObjectsWithTag("Player");
+        for( int j=0; j<players.Length; ++j )
+        {
+            PlayerCharacterController[] ctrl = players[j].GetComponentsInChildren<PlayerCharacterController>();
+            for( int i=0; i<ctrl.Length; ++i )
+            {
+                ctrl[i].DisableMovement();
+            }
+        }
+    }
+
     /// <summary>
     /// This method is called, when level is completed. Loads new level.
     /// </summary>
     public void onLevelCompleted()
     {
-        Debug.Log("TODO: Load next level");
+        Debug.Log("WIN! TODO: Load next level");
+
+        disablePlayer();
+    }
+
+    public void onLevelFailed()
+    {
+        Debug.Log("LOSE! TODO: Load menu scene");
+        
+        disablePlayer();
     }
 
     public bool areTriggersVisible()

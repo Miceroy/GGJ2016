@@ -2,6 +2,13 @@
 using System.Collections;
 
 public class PlayerCharacterController : MonoBehaviour {
+   // private bool m_moveEnabled;
+
+    public void DisableMovement()
+    {
+        GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
+    }
+
     ActionInterface[] m_actionInterfaces = null;
 
     private void findActionIntrerfaces(Collider other)
@@ -26,6 +33,12 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Police")
+        {
+            GameSceneController sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
+            sceneController.onLevelFailed();
+        }
+
         findActionIntrerfaces(other);
     }
 
