@@ -48,10 +48,10 @@ public class CustomAIMoveScript : MonoBehaviour
                 useDefaultWaypoints = false;
             }
         }
-        if (useDefaultWaypoints)
+        if (useDefaultWaypoints && waypoints.Count > 0)
         {
             
-                targetPos = waypoints[waypointIndex].transform.position;
+            targetPos = waypoints[waypointIndex].transform.position;
             if (Vector3.Distance(targetPos, t.position) <= waypointActivationRange )
             {
                 waypoints[waypointIndex].GetComponent<Waypoint>().StartTimer();
