@@ -6,7 +6,7 @@ public class PlayerCharacterController : MonoBehaviour {
 
     public void DisableMovement()
     {
-        GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().enabled = false;
+        GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().haltMovement();
     }
 
     ActionInterface[] m_actionInterfaces = null;

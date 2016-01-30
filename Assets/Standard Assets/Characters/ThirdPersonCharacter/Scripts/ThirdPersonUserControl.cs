@@ -12,9 +12,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-        
+        private bool m_disabled;
+
         private void Start()
         {
+            m_disabled = false;
             // get the transform of the main camera
             if (Camera.main != null)
             {
@@ -34,16 +36,30 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+            if (m_disabled) return;
+
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
         }
 
+        public void haltMovement()
+        {
+            m_disabled = true;
+            Debug.Log("Disable player user control");
+         //   m_Character.Move(new Vector3(0,0,0), false, false);
+        }
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+            if (m_disabled)
+            {
+                m_Character.Move(new Vector3(0, 0, 0), false, false);
+                return;
+            }
+
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
