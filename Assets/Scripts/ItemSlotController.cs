@@ -4,8 +4,8 @@ using System.Collections;
 public class ItemSlotController : MonoBehaviour, ActionInterface
 {
     public Items.ItemType m_requiredTriggerItemId;
-    
-    public void doAction()
+
+    public void doAction(GameObject other)
     {
         if (sceneController.isItemPicked(m_requiredTriggerItemId))
         {

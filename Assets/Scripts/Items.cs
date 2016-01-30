@@ -3,7 +3,7 @@ using System.Collections;
 
 public interface ActionInterface
 {
-    void doAction();
+    void doAction(GameObject otherObject);
 }
 
 
