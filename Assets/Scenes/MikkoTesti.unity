@@ -98,7 +98,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11436162, guid: ce8392a96b3f21c428790acfc9c0e951, type: 2}
       propertyPath: m_requiredItems.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 488380, guid: ce8392a96b3f21c428790acfc9c0e951, type: 2}
       propertyPath: m_LocalPosition.x
