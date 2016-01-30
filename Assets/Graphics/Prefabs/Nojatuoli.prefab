@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 475948}
   - 33: {fileID: 3365720}
   - 23: {fileID: 2362356}
+  - 65: {fileID: 6512120}
   m_Layer: 0
   m_Name: nojatuoli
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -.499999762, z: 0, w: .866025627}
+  m_LocalPosition: {x: -15.9200001, y: .74000001, z: -13.8000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 475948}
@@ -67,7 +68,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4eccfecc66c83a5419b80260b82198a5, type: 2}
+  - {fileID: 2100000, guid: 89fc432b6d9cba8448ca04496c399e66, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -88,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197018}
   m_Mesh: {fileID: 4300000, guid: 718991d424bd1d045a7f8a4af5017763, type: 3}
+--- !u!65 &6512120
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .00677911891, y: .00656393683, z: .041354239}
+  m_Center: {x: -1.50440965e-05, y: .00075675582, z: .0208746083}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

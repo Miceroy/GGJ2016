@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 432382}
   - 33: {fileID: 3377580}
   - 23: {fileID: 2302604}
+  - 65: {fileID: 6507678}
   m_Layer: 0
   m_Name: jaakaappi
   m_TagString: Untagged
@@ -88,6 +89,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166912}
   m_Mesh: {fileID: 4300000, guid: e373b0e2a1c57be46b7a0eebd2d0d78b, type: 3}
+--- !u!65 &6507678
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0097025279, y: .00799999759, z: .0080048535}
+  m_Center: {x: .000851271732, y: -7.4505806e-09, z: -2.42749184e-06}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

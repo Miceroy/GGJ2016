@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 427262}
   - 33: {fileID: 3341534}
   - 23: {fileID: 2370646}
+  - 64: {fileID: 6447954}
   m_Layer: 0
   m_Name: keittio
   m_TagString: Untagged
@@ -87,6 +88,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111710}
+  m_Mesh: {fileID: 4300000, guid: 40df1b629a6caa44b95a89ada729a96c, type: 3}
+--- !u!64 &6447954
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 40df1b629a6caa44b95a89ada729a96c, type: 3}
 --- !u!1001 &100100000
 Prefab:
