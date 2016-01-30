@@ -110,7 +110,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -231,7 +231,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1001 &1299905516
+--- !u!1001 &543469162
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -240,15 +240,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -.811823547
+      value: -.410000026
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.91759938e-18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.19000006
+      value: 3.8900001
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalRotation.x
@@ -256,7 +256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .999765873
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalRotation.z
@@ -264,12 +264,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .0216400642
       objectReference: {fileID: 0}
     - target: {fileID: 400038, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5103f31f1a3e1394a9148fad3dcf0c65, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb928c54fa32de142a7d9fb0cd517b39, type: 3}
   m_IsPrefabParent: 0
