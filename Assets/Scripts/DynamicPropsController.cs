@@ -26,8 +26,9 @@ public class DynamicPropsController : MonoBehaviour, ActionInterface
                 Rigidbody body = GetComponent<Rigidbody>();
                 Vector3 delta = gameObject.transform.position - m_collidingPlayer.transform.position;
                 delta.Normalize();
-                body.AddRelativeForce(10*body.mass*delta, ForceMode.Impulse);
-                m_cooldown = 1.0f;
+                body.AddExplosionForce(10.0f*body.mass,
+                    m_collidingPlayer.transform.position, 1.0f, 1.0f, ForceMode.Impulse);
+                m_cooldown = 0.5f;
             }
         }
     }
