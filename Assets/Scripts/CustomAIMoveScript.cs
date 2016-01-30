@@ -30,7 +30,7 @@ public class CustomAIMoveScript : MonoBehaviour
         brains = GetComponent<NavMeshAgent>();
         m_Animator = GetComponent<Animator>();
         prevPos = t.position;
-        m_Animator.applyRootMotion = true;
+        //m_Animator.applyRootMotion = true;
     }
 
 
