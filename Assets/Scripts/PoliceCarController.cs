@@ -20,6 +20,7 @@ public class PoliceCarController : MonoBehaviour {
     bool stopAfterLastWaypoint = true;
 
     public Vector3 m_move;
+    public Vector3 targetPos;
     Transform t;
 
     // Use this for initialization
@@ -70,7 +71,7 @@ public class PoliceCarController : MonoBehaviour {
             //Overrode it to look thru all layers
 
 
-            Vector3 targetPos = Vector3.zero;
+            targetPos = Vector3.zero;
             if (waypoints.Count > 0)
             {
 

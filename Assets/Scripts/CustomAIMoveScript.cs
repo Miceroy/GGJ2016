@@ -14,11 +14,13 @@ public class CustomAIMoveScript : MonoBehaviour
     public Vector3 m_move;
     private Transform player;
     Transform t;
+    NavMeshAgent brains;
     
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         t = GetComponent<Transform>();
+        brains = GetComponent<NavMeshAgent>();
     }
 
 
@@ -67,8 +69,8 @@ public class CustomAIMoveScript : MonoBehaviour
             }
             
         }
-
-        targetPos.y = t.position.y;
+        brains.destination = targetPos;
+        /*targetPos.y = t.position.y;
         m_move = (targetPos - t.position).normalized;
         m_move.Normalize();
 
@@ -107,6 +109,6 @@ public class CustomAIMoveScript : MonoBehaviour
         Quaternion q = Quaternion.LookRotation(m_move);
         t.rotation = Quaternion.Slerp(t.rotation, q, Time.deltaTime * 20);
         t.position += t.forward * 3 * Time.deltaTime;
-
+        */
     }
 }
