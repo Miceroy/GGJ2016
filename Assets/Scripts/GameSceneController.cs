@@ -9,11 +9,14 @@ public class GameSceneController : MonoBehaviour {
     };
     */
     public bool m_visibleTriggers = true;
+    public float downTimeTimerTime = 30.0f;
     public Items.ItemType[] m_requiredItems;
 
     private GameObject m_youWinText = null;
     private GameObject m_youLoseText = null;
+    private GameObject m_downTimerText = null;
     GameObjectivesController m_gameObjectives = null;
+
 
     struct ItemPickAndAction
     {
@@ -132,6 +135,7 @@ public class GameSceneController : MonoBehaviour {
     {
         m_youWinText = transform.FindChild("GUI/Canvas/YouWinText").gameObject;
         m_youLoseText = transform.FindChild("GUI/Canvas/YouLoseText").gameObject;
+        m_downTimerText = transform.FindChild("GUI/Canvas/DownTimer").gameObject;
         m_youWinText.SetActive(false);
         m_youLoseText.SetActive(false);
 
@@ -151,6 +155,19 @@ public class GameSceneController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+        float time = downTimeTimerTime - Time.timeSinceLevelLoad;
+        if (time > -1.0f)
+        {
+            if (time < 0.0f)
+                time = 0.0f;
+
+            m_downTimerText.GetComponent<UnityEngine.UI.Text>().text = "Police will arrive in " + time.ToString("N1") + " seconds";
+        }
+        else
+        {
+            m_downTimerText.GetComponent<UnityEngine.UI.Text>().text = "";
+
+        }
 	}
 }
