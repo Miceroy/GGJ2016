@@ -45,7 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\AutoAttackProps.cs" />
      <Compile Include="Assets\Scripts\BloodEngine.cs" />
      <Compile Include="Assets\Scripts\BloodScript.cs" />
@@ -54,10 +53,12 @@
      <Compile Include="Assets\Scripts\DeadBodyController.cs" />
      <Compile Include="Assets\Scripts\DynamicPropsController.cs" />
      <Compile Include="Assets\Scripts\ExitZoneController.cs" />
+     <Compile Include="Assets\Scripts\GameObjectivesController.cs" />
      <Compile Include="Assets\Scripts\GameSceneController.cs" />
      <Compile Include="Assets\Scripts\ItemController.cs" />
      <Compile Include="Assets\Scripts\ItemSlotController.cs" />
      <Compile Include="Assets\Scripts\Items.cs" />
+     <Compile Include="Assets\Scripts\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\PlayerCharacterController.cs" />
      <Compile Include="Assets\Scripts\PoliceCarController.cs" />
      <Compile Include="Assets\Scripts\PoliceCharacterController.cs" />
@@ -68,17 +69,11 @@
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
