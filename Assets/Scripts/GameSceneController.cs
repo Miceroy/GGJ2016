@@ -26,6 +26,13 @@ public class GameSceneController : MonoBehaviour {
 
     ItemPickAndAction[] m_pickedItems = null;
 
+    private void PlaySound()
+    {
+        AudioSource s = GetComponent<AudioSource>();
+        if (s != null) s.Play();
+    }
+
+
     public void itemPicked(Items.ItemType itemId)
     {
         if (m_pickedItems[(int)itemId].picked == true)
@@ -158,6 +165,7 @@ public class GameSceneController : MonoBehaviour {
             m_pickedItems[i].picked = false;
             m_pickedItems[i].action = false;
         }
+        Invoke("PlaySound", downTimeTimerTime);
 	}
 	
 	// Update is called once per frame

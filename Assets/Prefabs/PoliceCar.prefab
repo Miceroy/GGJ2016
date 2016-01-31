@@ -18,7 +18,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &151178
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -52,7 +52,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &153866
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -72,12 +72,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151178}
-  m_LocalRotation: {x: .161307022, y: -4.12965235e-08, z: -2.25215988e-08, w: .986904323}
-  m_LocalPosition: {x: -.529999971, y: 1.72000003, z: 2.73000002}
+  m_LocalRotation: {x: .811908066, y: -1.11758718e-08, z: -2.60770339e-08, w: .583785355}
+  m_LocalPosition: {x: -.530000329, y: -2.7299993, z: 1.71999955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 433942}
-  m_RootOrder: 2
+  m_Father: {fileID: 461870}
+  m_RootOrder: 1
 --- !u!4 &433942
 Transform:
   m_ObjectHideFlags: 1
@@ -89,8 +89,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461870}
-  - {fileID: 455114}
-  - {fileID: 409394}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &455114
@@ -99,12 +97,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153866}
-  m_LocalRotation: {x: .161307022, y: -4.0636106e-08, z: -2.9305232e-08, w: .986904323}
-  m_LocalPosition: {x: .879999995, y: 1.72000003, z: 2.73000002}
+  m_LocalRotation: {x: .811908066, y: -3.72529074e-09, z: -2.98023259e-08, w: .583785415}
+  m_LocalPosition: {x: .879999399, y: -2.7299993, z: 1.71999955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 433942}
-  m_RootOrder: 1
+  m_Father: {fileID: 461870}
+  m_RootOrder: 0
 --- !u!4 &461870
 Transform:
   m_ObjectHideFlags: 1
@@ -114,7 +112,9 @@ Transform:
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106709}
   m_LocalPosition: {x: 0, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 455114}
+  - {fileID: 409394}
   m_Father: {fileID: 433942}
   m_RootOrder: 0
 --- !u!23 &2360992
@@ -239,8 +239,9 @@ MonoBehaviour:
   - {fileID: 0}
   waypointIndex: 0
   moveSpeed: 10
-  activationTimer: 1
+  activationTimer: 30
   activateCountdown: 1
+  modelToActivate: {fileID: 0}
   amountOfCopsInCar: 2
   copTemplate: {fileID: 126126, guid: ee12185dd1f014a4a9022277f8cf33f2, type: 2}
   m_move: {x: 0, y: 0, z: 0}
