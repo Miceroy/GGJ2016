@@ -4,6 +4,9 @@ using System.Collections;
 public class ItemSlotController : MonoBehaviour, ActionInterface
 {
     public Items.ItemType m_requiredTriggerItemId;
+    public Transform m_gameObjectToFollow;
+    public GameObject[] m_actionDoneActiveObjects;
+    public GameObject[] m_actionNotDoneActiveObjects;
 
     public void doAction(GameObject other)
     {
@@ -11,6 +14,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
         {
             Debug.Log("Do action for item slot " + m_requiredTriggerItemId.ToString());
             sceneController.itemAction(m_requiredTriggerItemId);
+            updateActiveObjects(true);
             updateVisuals(false);
             gameObject.GetComponent<Collider>().enabled = false;
         }
@@ -25,16 +29,37 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
     GameObject enteredGO;
     GameObject leavedGO;
     GameSceneController sceneController;
+    Vector3 m_initialPosition;
     // Use this for initialization
     void Start()
     {
+        m_initialPosition = transform.localPosition;
+
         TextMesh pickupText = gameObject.transform.FindChild("Entered/Pickup/PickupText").GetComponent<TextMesh>();
         pickupText.text = "Use " + m_requiredTriggerItemId.ToString() + "\nhere";
         enteredGO = gameObject.transform.FindChild("Entered").gameObject;
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
-
+        updateActiveObjects(false);
         updateVisuals(false);
+    }
+
+    void updateActiveObjects(bool actionDone)
+    {
+        for (int i = 0; i < m_actionDoneActiveObjects.Length; ++i)
+        {
+            if (m_actionDoneActiveObjects[i] != null)
+            {
+                m_actionDoneActiveObjects[i].SetActive(actionDone);
+            }
+        }
+        for (int i = 0; i < m_actionNotDoneActiveObjects.Length; ++i)
+        {
+            if (m_actionDoneActiveObjects[i] != null)
+            {
+                m_actionDoneActiveObjects[i].SetActive(!actionDone);
+            }
+        }
     }
 
     void updateVisuals(bool onTrigger)
@@ -58,13 +83,15 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
             leavedGO.SetActive(false);
         }
     }
-    /*
+    
 	// Update is called once per frame
 	void Update ()
     {
-        
-	
-	}*/
+        if (m_gameObjectToFollow != null)
+        {
+            transform.position = m_gameObjectToFollow.position + m_initialPosition; 
+        }
+	}
 
     void OnTriggerEnter(Collider other)
     {
