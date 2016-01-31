@@ -26,7 +26,9 @@ public class PoliceCarController : MonoBehaviour {
     Transform t;
     // Use this for initialization
     void Start () {
-        modelToActivate.SetActive(false);
+
+        if (modelToActivate != null)
+            modelToActivate.SetActive(false);
         t = GetComponent<Transform>();
     }
 	
@@ -39,7 +41,8 @@ public class PoliceCarController : MonoBehaviour {
             activationTimer = 0;
             activateCountdown = false;
             shouldMove = true;
-            modelToActivate.SetActive(true);
+            if (modelToActivate!=null)
+                modelToActivate.SetActive(true);
         }
 	
 	}
