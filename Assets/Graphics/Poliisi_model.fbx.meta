@@ -72,7 +72,77 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.001|Hit
+      takeName: Armature.001|Hit
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.001
+        weight: 1
+      - path: Armature.001/Armature.001|Hips
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.L/Armature.001|Leg1.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.L/Armature.001|Leg1.L/Armature.001|Foot.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.R/Armature.001|Leg1.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Leg2.R/Armature.001|Leg1.R/Armature.001|Foot.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Neck
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Neck/Armature.001|Head
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.L/Armature.001|Arm2.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.L/Armature.001|Arm2.L/Armature.001|Arm1.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.L/Armature.001|Arm2.L/Armature.001|Arm1.L/Armature.001|Hand.L
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.R/Armature.001|Arm2.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.R/Armature.001|Arm2.R/Armature.001|Arm1.R
+        weight: 1
+      - path: Armature.001/Armature.001|Hips/Armature.001|Spine/Armature.001|Chest/Armature.001|Shoulder.R/Armature.001|Arm2.R/Armature.001|Arm1.R/Armature.001|Hand.R
+        weight: 1
+      - path: Cube.001
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
