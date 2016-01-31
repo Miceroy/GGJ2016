@@ -20,6 +20,7 @@ public class CustomAIMoveScript : MonoBehaviour
     Transform t;
     Vector3 prevPos = Vector3.zero;
     NavMeshAgent brains;
+    Rigidbody rb;
 
     Animator m_Animator;
 
@@ -30,6 +31,9 @@ public class CustomAIMoveScript : MonoBehaviour
         brains = GetComponent<NavMeshAgent>();
         m_Animator = GetComponent<Animator>();
         prevPos = t.position;
+        rb = GetComponent<Rigidbody>();
+
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         //m_Animator.applyRootMotion = true;
     }
 
@@ -43,6 +47,9 @@ public class CustomAIMoveScript : MonoBehaviour
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
         RaycastHit rh;
         //Some layer test code, futher inspection required
         int omitPoliceLayerMask = 1 << 9;
