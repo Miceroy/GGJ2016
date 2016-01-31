@@ -95,8 +95,8 @@ public class CustomAIMoveScript : MonoBehaviour
     {
         // update the animator parameters
         float m_TurnAmount = Mathf.Atan2(move.x, move.z);
-        m_Animator.SetFloat("Forward", move.z, 0.1f, Time.deltaTime);
-        m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
+      //  m_Animator.SetFloat("Forward", move.z, 0.1f, Time.deltaTime);
+      //  m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
         
         //m_Animator.SetBool("Crouch", m_Crouching);
         //m_Animator.SetBool("OnGround", m_IsGrounded);
