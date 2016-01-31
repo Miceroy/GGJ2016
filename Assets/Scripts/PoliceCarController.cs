@@ -14,6 +14,8 @@ public class PoliceCarController : MonoBehaviour {
     public float activationTimer = 30.0f;
     public bool activateCountdown = false;
 
+    public GameObject modelToActivate;
+
     public int amountOfCopsInCar = 4;
     public GameObject copTemplate;
 
@@ -22,9 +24,9 @@ public class PoliceCarController : MonoBehaviour {
     public Vector3 m_move;
     public Vector3 targetPos;
     Transform t;
-
     // Use this for initialization
     void Start () {
+        modelToActivate.SetActive(false);
         t = GetComponent<Transform>();
     }
 	
@@ -37,6 +39,7 @@ public class PoliceCarController : MonoBehaviour {
             activationTimer = 0;
             activateCountdown = false;
             shouldMove = true;
+            modelToActivate.SetActive(true);
         }
 	
 	}
