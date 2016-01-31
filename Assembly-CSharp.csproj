@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\PlayerCharacterController.cs" />
      <Compile Include="Assets\Scripts\PoliceCarController.cs" />
      <Compile Include="Assets\Scripts\PoliceCharacterController.cs" />
+     <Compile Include="Assets\Scripts\RotatorScript.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonAIControl.cs" />
      <Compile Include="Assets\Scripts\Waypoint.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
