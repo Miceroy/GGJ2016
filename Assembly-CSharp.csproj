@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\AutoAttackProps.cs" />
      <Compile Include="Assets\Scripts\BloodEngine.cs" />
      <Compile Include="Assets\Scripts\BloodScript.cs" />
+     <Compile Include="Assets\Scripts\CameraFacing.cs" />
      <Compile Include="Assets\Scripts\CustomAIMoveScript.cs" />
      <Compile Include="Assets\Scripts\DeadBodyController.cs" />
      <Compile Include="Assets\Scripts\DynamicPropsController.cs" />
