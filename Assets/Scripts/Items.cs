@@ -12,7 +12,9 @@ public class Items {
 
     public enum ItemType
     {
-        FLOWER,
+        GASOLINE,
+        PAINTCAN,
+        PAPER,
         LAST_ITEM_TYPE
     }
 
