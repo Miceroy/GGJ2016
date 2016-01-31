@@ -15,7 +15,6 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
             Debug.Log("Do action for item slot " + m_requiredTriggerItemId.ToString());
             sceneController.itemAction(m_requiredTriggerItemId);
             updateActiveObjects(true);
-            updateVisuals(false);
             gameObject.GetComponent<Collider>().enabled = false;
         }
         else
@@ -30,6 +29,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
     GameObject leavedGO;
     GameSceneController sceneController;
     Vector3 m_initialPosition;
+  
     // Use this for initialization
     void Start()
     {
@@ -41,7 +41,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
         updateActiveObjects(false);
-        updateVisuals(false);
+    //    updateVisuals(false);
     }
 
     void updateActiveObjects(bool actionDone)
@@ -91,11 +91,27 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
         {
             transform.position = m_gameObjectToFollow.position + m_initialPosition; 
         }
+
+        if (!sceneController.isItemActionDone(m_requiredTriggerItemId))
+        {
+            if (sceneController.isItemPicked(m_requiredTriggerItemId))
+            {
+                updateVisuals(true);
+            }
+            else
+            {
+                updateVisuals(false);
+            }
+        }
+        else
+        {
+            updateVisuals(false);
+        }
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        updateVisuals(true);
+    //    updateVisuals(true);
 
     //    Debug.Log("OnTriggerEnter " + other.gameObject.name);
 
@@ -109,7 +125,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
 
     void OnTriggerExit(Collider other)
     {
-        updateVisuals(false);
+    //    updateVisuals(false);
 
 
         //Destroy(other.gameObject);

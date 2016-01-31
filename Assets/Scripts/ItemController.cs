@@ -78,7 +78,7 @@ public class ItemController : MonoBehaviour, ActionInterface
             }
             else
             {
-                enteredGO.SetActive(false);
+                enteredGO.SetActive(true);
                 leavedGO.SetActive(true);
             }
         }

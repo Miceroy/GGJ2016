@@ -59,6 +59,10 @@ public class GameSceneController : MonoBehaviour {
     {
         return m_pickedItems[(int)itemId].picked;
     }
+    public bool isItemActionDone(Items.ItemType itemId)
+    {
+        return m_pickedItems[(int)itemId].action;
+    }
 
     /// <summary>
     /// Returns true if all items are picked from the level. 
