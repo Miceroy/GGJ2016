@@ -43,7 +43,10 @@ public class CustomAIMoveScript : MonoBehaviour
         
     }
 
-    
+    public void ActivateBashing()
+    {
+        m_Animator.SetBool("isBashing", true);
+    }
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {

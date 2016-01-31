@@ -38,6 +38,7 @@ public class PlayerCharacterController : MonoBehaviour {
         {
             GameSceneController sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();
             sceneController.onLevelFailed();
+            other.gameObject.GetComponent<CustomAIMoveScript>().ActivateBashing();
         }
 
         findActionIntrerfaces(other);
