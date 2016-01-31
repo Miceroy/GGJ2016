@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CreditsController.cs" />
      <Compile Include="Assets\Scripts\AutoAttackProps.cs" />
      <Compile Include="Assets\Scripts\BloodEngine.cs" />
      <Compile Include="Assets\Scripts\BloodScript.cs" />
