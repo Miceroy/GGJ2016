@@ -12,7 +12,7 @@ public class GameObjectivesController : MonoBehaviour {
     public void addObjective(string text)
     {
         GameObject newGo = GameObject.Instantiate(objectiveTextPrefab, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
-        newGo.transform.parent = gameObject.transform;
+        newGo.transform.SetParent(gameObject.transform);
 
         Vector3 pos = newGo.transform.position;
         pos.y += -20.0f * objectives.Count;
