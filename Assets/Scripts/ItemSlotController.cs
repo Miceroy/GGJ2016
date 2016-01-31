@@ -11,6 +11,7 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
         {
             Debug.Log("Do action for item slot " + m_requiredTriggerItemId.ToString());
             sceneController.itemAction(m_requiredTriggerItemId);
+            updateVisuals(false);
             gameObject.GetComponent<Collider>().enabled = false;
         }
         else
@@ -27,6 +28,8 @@ public class ItemSlotController : MonoBehaviour, ActionInterface
     // Use this for initialization
     void Start()
     {
+        TextMesh pickupText = gameObject.transform.FindChild("Entered/Pickup/PickupText").GetComponent<TextMesh>();
+        pickupText.text = "Use " + m_requiredTriggerItemId.ToString() + "\nhere";
         enteredGO = gameObject.transform.FindChild("Entered").gameObject;
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();

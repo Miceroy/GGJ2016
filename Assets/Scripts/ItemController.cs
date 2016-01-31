@@ -21,6 +21,8 @@ public class ItemController : MonoBehaviour, ActionInterface
     GameSceneController sceneController;
 	// Use this for initialization
 	void Start () {
+        TextMesh pickupText = gameObject.transform.FindChild("Entered/Pickup/PickupText").GetComponent<TextMesh>();
+        pickupText.text = "Pick up\n" + m_triggerItemId.ToString();
         enteredGO = gameObject.transform.FindChild("Entered").gameObject;
         leavedGO = gameObject.transform.FindChild("Leaved").gameObject;
         sceneController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameSceneController>();

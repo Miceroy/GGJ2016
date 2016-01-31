@@ -15,4 +15,9 @@ public class Items {
         FLOWER,
         LAST_ITEM_TYPE
     }
+
+    public static string[] ItemObjectives =
+    {
+        "Place flower up to victims ass"
+    };
 }

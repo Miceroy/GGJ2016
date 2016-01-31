@@ -13,6 +13,7 @@ public class GameSceneController : MonoBehaviour {
 
     private GameObject m_youWinText = null;
     private GameObject m_youLoseText = null;
+    GameObjectivesController m_gameObjectives = null;
 
     struct ItemPickAndAction
     {
@@ -46,6 +47,7 @@ public class GameSceneController : MonoBehaviour {
             Debug.Log("Item " + itemId.ToString() + " done action");
         }
         m_pickedItems[(int)itemId].action = true;
+        m_gameObjectives.doneObjective( Items.ItemObjectives[(int)m_requiredItems[(int)itemId]] );
     }
 
     /// <summary>
@@ -128,6 +130,12 @@ public class GameSceneController : MonoBehaviour {
         m_youLoseText = transform.FindChild("GUI/Canvas/YouLoseText").gameObject;
         m_youWinText.SetActive(false);
         m_youLoseText.SetActive(false);
+
+        m_gameObjectives = GetComponentInChildren<GameObjectivesController>();
+        for (int i = 0; i < m_requiredItems.Length; ++i)
+        {
+            m_gameObjectives.addObjective(Items.ItemObjectives[(int)m_requiredItems[i]]);
+        }
 
         m_pickedItems = new ItemPickAndAction[(int)Items.ItemType.LAST_ITEM_TYPE];
         for (int i = 0; i < m_pickedItems.Length; ++i)
