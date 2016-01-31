@@ -110,7 +110,7 @@ public class GameSceneController : MonoBehaviour {
 
     void LoadNextLevel()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel(0);
     }
 
     void LoadMainMenu()
@@ -126,12 +126,13 @@ public class GameSceneController : MonoBehaviour {
         //Debug.Log("WIN! TODO: Load next level");
         m_youWinText.SetActive(true);
         disablePlayer();
-        Invoke("LoadNextLevel", 5.0f);
+        Invoke("LoadNextLevel", 3.0f);
     }
 
     public void onLevelFailed()
     {
-        m_youLoseText.SetActive(true);
+        if (m_youWinText.activeInHierarchy == false)
+            m_youLoseText.SetActive(true);
         disablePlayer();
         Invoke("LoadMainMenu", 5.0f);
     }
